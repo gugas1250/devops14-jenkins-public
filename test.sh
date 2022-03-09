@@ -1,1 +1,1 @@
-echo "Testing public repo"
+eco "Testing public repo"
