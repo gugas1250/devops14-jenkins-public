@@ -1,8 +1,6 @@
 echo "Testing public repo"
-uname -a 
-date
-whoami
+rm -rf git.jenkins
 mkdir git.jenkins
-touch /var/www/html/index.html
+
 
 
