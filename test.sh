@@ -1,1 +1,2 @@
-eco "Testing public repo"
+echo "Testing public repo"
+sudo yum install httpd -y
