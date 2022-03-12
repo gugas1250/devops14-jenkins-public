@@ -11,14 +11,14 @@ pipeline {
             }
         }
 
-        stage ("TFInit") {
+        stage ('TFInit') {
             steps {
                 //terraform initialize
                 sh "terraform init"
             }
         }
 
-        stage("TFPlan") {
+        stage('TFPlan') {
             steps {
                 sh "terraform fmt"
                 sh "terraform plan"
@@ -26,7 +26,7 @@ pipeline {
 
         }
 
-        stage("TFApply") {
+        stage('TFApply') {
             steps {
                 sh "terraform apply -auto-aprove"
             }
