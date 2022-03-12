@@ -2,37 +2,31 @@ pipeline {
     agent any
 
     stages {
-
-        stage ('Checkout') {
+        
+        stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:gugas1250/devops14-jenkins-public.git'
-
-
+                git branch: 'main', url: 'git@github.com:gugas1250/devops21-jenkins-public.git'
+               
             }
         }
 
-        stage ('TFInit') {
+        stage('TFInit') {
             steps {
                 //terraform initialize
                 sh "terraform init"
             }
         }
-
-        stage ("TFPlan") {
+        stage('TFPlan') {
             steps {
-                
+                sh "terraform fmt"
                 sh "terraform plan"
             }
-
         }
-
-        stage ("TFApply") {
+        stage('TFApply') {
             steps {
-                sh "terraform apply -auto-aprove"
+                sh "terraform apply -auto-approve"
             }
         }
+
     }
 }
-
-
-
