@@ -3,15 +3,15 @@ pipeline {
 
     stages {
 
-        stage("Checkout") {
+        stage('Checkout') {
             steps {
-                git branch: "main", url: "git@github.com:gugas1250/devops14-jenkins-public.git"
+                git branch: 'main', url: 'git@github.com:gugas1250/devops14-jenkins-public.git'
 
 
             }
         }
 
-        stage("TFInit") {
+        stage('TFInit') {
             steps {
                 //terraform initialize
                 sh "terraform init"
@@ -20,7 +20,7 @@ pipeline {
 
         stage("TFPlan") {
             steps {
-                sh "terraform fmt"
+                
                 sh "terraform plan"
             }
 
