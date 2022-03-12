@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage ('TFInit') {
+        stage('TFInit') {
             steps {
                 //terraform initialize
                 sh "terraform init"
